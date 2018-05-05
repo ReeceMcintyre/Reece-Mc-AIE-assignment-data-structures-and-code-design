@@ -3,13 +3,11 @@
 #include <list>
 #include <stack>
 #include <queue>
-
+#include <string>
 
 int main()
 {   
-    std::deque<std::string> dequeOfPeople;
-
-    //todo: for deque make it a string deque and have a person pushing in line scenario
+    
 
     system("pause");
 }
@@ -36,7 +34,8 @@ void stackImplementation()
 {
     std::stack<int> myStack;
 
-    myStack.push(5); // add elements to the top of the stack
+    // add elements to the top of the stack with push
+    myStack.push(5); 
     myStack.push(10);
     myStack.push(15);
 
@@ -92,4 +91,25 @@ void priorityQueueImplementation()
     std::cout << "After calling pop() the top of the queue will now be " << myFirstPriorityQueue.top() << " This is because priority queues prioritize the larger number\n\n";
 }
 
-// TODO: add the sort and search functions somewhere
+void dequeImplementation()
+{
+    std::deque<std::string> dequeOfPeople;
+
+    // add people to the end of the deque 
+    dequeOfPeople.push_back("John");
+    dequeOfPeople.push_back("Sam");
+    dequeOfPeople.push_back("Hannah");
+
+    std::cout << "Deque implementation: \n\n";
+
+    std::cout << "3 people are standing in line at a grocery store John, Sam and Hannah\n\n";
+    std::cout << "A man named George joins the back of the line\n\n";
+
+    dequeOfPeople.emplace_back("George"); // emplace creates and inserts and element and in this case at a desired side of the deque
+
+    std::cout << "Another man Tom decides to push in front of the line and go in front of John\n\n";
+
+    dequeOfPeople.emplace_front("Tom");
+
+    std::cout << "Now at the front of the line is " << dequeOfPeople.front() << " and at the back is " << dequeOfPeople.back() << "\n\n";
+}
