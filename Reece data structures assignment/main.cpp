@@ -6,19 +6,12 @@
 #include <string>
 
 #include "MyFunctions.h"
+#include "LinearSearchAlgorithm.h"
 
 int main()
 {   
-
+    std::cout << "Welcome to Reeces assessment program\n\n";
+    std::cout << "The contents of include...";
 
     system("pause");
 }
-
-
-
-//int binarySearch(int middleOfList, int min, int max)
-//{
-//    middleOfList = (min + max) / 2; // declaring where the middle of the list is 
-//
-//
-//}

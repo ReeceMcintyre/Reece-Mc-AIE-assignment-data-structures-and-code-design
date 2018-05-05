@@ -112,10 +112,38 @@ void sortAlgorithmUse()
     sortList.push_back(3);
 
     std::cout << "Sort algorithm implementation: \n\n";
-
     std::cout << "A list consisting of 5, 4, 3 need to be sorted to smallest to largest, easily done using the sort() function \n\n";
 
     sortList.sort(); // uses an in built algorithm to sort the elements into order
 
     std::cout << "To make sure it worked we can access the top element with front(), the top element is now " << sortList.front() << "\n\n";
 }
+
+void searchAlgorithmUse()
+{
+    int userInput;
+
+    std::list<int> listToSearch;
+
+    listToSearch.push_back(28);
+    listToSearch.push_back(32);
+    listToSearch.push_back(67);
+
+    std::cout << "Search algorithm implementation: \n\n";
+    std::cout << "A list consists of the numbers 28, 32, 67\n\n";
+    std::cout << "You can test to see if these number are present by typing one of the numbers in and a search algorithm will check\n\n";
+
+    std::cin >> userInput;
+
+    std::cout << "\n\n";
+
+    linearSearch(listToSearch, userInput);
+}
+
+void hashingImplementation()
+{
+    std::hash<int> hashedNumber;
+
+    std::cout << "The hash value for the hash variable hashedNumber is " << hashedNumber._Do_hash << "\n\n";
+}
+
