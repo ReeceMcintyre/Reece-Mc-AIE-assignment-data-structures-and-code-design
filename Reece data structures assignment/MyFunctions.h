@@ -1,5 +1,8 @@
 #pragma once
 
+#include "LinearSearchAlgorithm.h"
+
+int main();
 
 void listImplementation()
 {
@@ -59,7 +62,7 @@ void queueImplementation()
 
     myQueue.pop(); // removes the first in the queue
 
-    std::cout << "Once the first leaves the first in queue is now " << myQueue.front() << "we can remove the top of the queue and go to the next by using pop()\n\n";
+    std::cout << "Once the first leaves the first in queue is now " << myQueue.front() << " we can remove the top of the queue and go to the next by using pop()\n\n";
 }
 
 void priorityQueueImplementation()
@@ -147,3 +150,65 @@ void hashingImplementation()
     std::cout << "The hash value for the hash variable hashedNumber is " << hashedNumber._Do_hash << "\n\n";
 }
 
+void backToHomeScreen()
+{
+    char nextMove;
+
+    std::cout << "if you would like to return to the home screen type h or to exit the program type e\n\n";
+
+    std::cin >> nextMove;
+
+    if (nextMove == 'h')
+    {
+        system("cls");
+
+        main();
+    }
+    else if (nextMove == 'e')
+    {
+        exit(0);
+    }
+}
+
+void checkForSelection()
+{
+    int userNumberSelection;
+
+    std::cin >> userNumberSelection;
+
+    // check to see what number the user typed and open the content accordingly
+    switch (userNumberSelection)
+    {
+    case 1: listImplementation();
+        backToHomeScreen();
+        break;
+
+    case 2: stackImplementation();
+        backToHomeScreen();
+        break;
+
+    case 3: queueImplementation();
+        backToHomeScreen();
+        break;
+
+    case 4: priorityQueueImplementation();
+        backToHomeScreen();
+        break;
+
+    case 5: dequeImplementation();
+        backToHomeScreen();
+        break;
+
+    case 6: sortAlgorithmUse();
+        backToHomeScreen();
+        break;
+
+    case 7: searchAlgorithmUse();
+        backToHomeScreen();
+        break;
+
+    case 8: hashingImplementation();
+        backToHomeScreen();
+        break;
+    }
+}
